@@ -1,15 +1,118 @@
 <html>
 	<head>
-	<title> W. I. P. </title>
+	<title> Strony internetowe </title>
 	<style>
+	.textflex { display : flex; }
+	.big { font-size: 50px; }
+	.medium { font-size: 35px; }
+	.zdjcinside { margin-left: 5px; margin-top: 0; }
+	.nazwa { font-size: 30px; }
+	.graybg { background-color: 9c9c9c; }	
 	body {
 		background-color: bebebe;
 	}
+	td {
+	border: 1px solid black;
+	} 
 	</style>
 	<script>
+	var clicks = 0
+	var power = 1 
+	var price = 50
+	var superpower = 1
+	var superprice = 1000
+	function funkcja () {
+		document.getElementById("numer999").innerHTML = "widzisz działa <button onclick=funkcja2()> i przycisk 2 też jest </button>";
+	}
+	function funkcja2 () {
+		document.getElementById("numer999").innerHTML = "tekst21 <button onclick=funkcja()> tekst999 ";
+	}
+	function click1 () {
+		clicks = clicks + (power ** superpower);
+		document.getElementById("clickerdisplay").innerHTML = clicks;
+	}
+	function upgrade () {
+		if (clicks >= price) {
+		clicks = clicks - price;
+		price = Math.round(price * 1.1);
+		power = power + 1;
+		document.getElementById("upgrader").innerHTML = "Ulepsz (cena: " + price + ")";
+		document.getElementById("clickerdisplay").innerHTML = clicks;
+		}
+		else {
+			alert('Potrzeba ci więcej punktów.');
+		}
+		
+	}
+	function upgrademore () {
+		if (clicks >= superprice) {
+		clicks = clicks - superprice;
+		superprice = Math.round(superprice ** 1.5);
+		superpower = superpower + 1;
+		document.getElementById("superupgrader").innerHTML = "Super ulepsz (cena: " + superprice + ")";
+		document.getElementById("clickerdisplay").innerHTML = clicks;
+		}
+		else {
+			alert('Potrzeba ci więcej punktów.');
+		}
+	}
 	</script>
 	</head>
 	<body>
-	<h1> work in progress </h1>
+	<h1 class="big"> STRONY INTERNETOWE </h1>
+	<p class="medium"> Chyba najlepsza część strony (mojej). Chciałbym jeszcze powiedzieć że mój kolega robi osobną stronę, ale link do niej jest tutaj: </p>
+	<a href="https://estin671.github.io/stronafajna"> Znajduje się tu więcej rzeczy niż tylko o komputerach :) </a>
+	<br>
+	<p class="medium"> CSS </p>
+	<p class="graybg"> CSS to jest tak naprawdę druga podstawa stron. Aby go użyć, dodaj w znaczniku &lthead&gt znacznik &ltstyle&gt. Swoją drogą, normalnie &lt oraz &gt nie można użyć. Trzeba napisać &amplt lub &ampgt (ciekawostka: &amp też nie. trzeba napisać &ampamp) CSS działa na prostej zasadzie. Dodajesz "body { }" a w klamrach na przykład background-color: bebebe (tego używam na tej stronie). </p>
+	<p class="medium"> iframe'y </p>
+	<p class="graybg"> I nie, nie są to "invincibility frames" z gier ani ramki stworzone przez apple. Jest to coś takiego </p>
+	<iframe src="https://estin671.github.io/stronafajna"> womp womp twoja przeglądarka jest za stara </iframe>
+	<p> jest to ta strona kolegi (tylko że parę szczegółów zmienia moja strona; może np. być inne tło). </p>
+	<p class="graybg"> Da się dzięki nim np. dodać tutorial na yt a potem go dać do ramki. Aby je dodać, użyj &ltiframe src="[daj adres strony]"&gt </p>
+	<p class="medium"> przyciski (ale bardzo podstawowe) </p>
+	<p class="graybg"> Przycisk <button onclick="alert('siema')"> :D </button> działa na różne sposoby. Można dodać go używając &ltbutton&gt, ale żeby coś robił trzeba dodać onclick = "[coś]". Na razie jedyne co mogę polecić co nie jest zbyt ciężkie to alert: dodaje się &ltbutton onclick="alert('tekst')"&gt i tekst sam się pokaże. </p>
+	<p class="medium"> Listy </p>
+	 <ul>
+		<li>Listy dodaje się używając &ltul&gt</li>
+		<li>A punkty &ltli&gt</li>
+		<li>Nie wiem co napisać; listy są nudne :p</li>
+	</ul> 
+	<p class="medium"> Tabele </p>
+	<table>
+		<tr>
+      <td>Tabele</td> <td>Są</td> <td>Jeszcze</td>
+		</tr>
+		<tr>
+      <td>Bardziej</td> <td>Nudne</td> <td>Niż</td>
+		</tr>
+		<tr>
+      <td>Listy</td> <td>Ale</td> <td>Są tu</td>
+		</tr>
+	</table>
+	<p class="graybg"> A więc aby dodać tabelę w CSS trzeba dodać td { border: 1px solid black; }, a potem &lttable&gt a w środku &lttd&gt a jeszcze bardziej w środku &lttr&gt. Jest to skomplikowane i trudne do wytłumaczenia według mnie więc po prostu dam tu zdjęcie: </p>
+	<img src="../data/table.png">
+	<p class="medium"> A jak robić taki tekst? </p>
+	<p class="graybg"> Ja używam znaczników &ltp&gt, oraz klas. Aby dodać klasę do znacznika &ltp&gt, trzeba napisać &ltp class="test123"&gt i klasa się doda. W znaczniku &ltstyle&gt dodaje się .test123{ } a w klamrach inne rzeczy. W tym artykule dodałem klasę medium która ma font-size: 35px; i klasę graybg która ma background-color: 9c9c9c. </p>
+	<p class="medium"> Przyciski (ale trochę bardziej zaawansowane) </p>
+	<p class="graybg"> W &lthead&gt dodajemy &ltscript&gt. Tam dodajemy function funkcja() {} a w klamrach dodajemy document.getElementById("numer999"). Potem do znacznika p dodajemy id="numer999." Po prawej od document.getElementById dodajemy .innerHTML = "widzisz działa". Ja dodałem tam jeszcze przycisk ale to ciut bardziej skomplikowane. </p>
+	<p id="numer999"> tekst21 <button onclick="funkcja()"> tekst999 </button> </p>
+	<p class="medium"> Co przyciski potrafią naprawdę? </p>
+	<p class="graybg"> To: </p>
+	<p id="clickerdisplay" class = "medium"> 0 </p>
+	<button onclick="click1()"> Kliknij</button>
+	<button onclick="upgrade()" id="upgrader">Ulepsz (cena: 50)</button>
+	<button onclick="upgrademore()" id="superupgrader">Super ulepsz (cena: 1000)</button>
+	<p class="medium"> A więc to jest koniec mojej strony! Jedyne co zostało... to quiz! </p>
+	<br>
+	<div class="textflex">
+	<a href="quiz.html"><img src="../data/whar.jpg"></a>
+	<p class="zdjcinside"> Quiz </p>
+	</div>
+	<br>
+	<div class="textflex">
+	<a href="../index.html"><img src="../data/back.png"></a>
+	<p class="zdjcinside"> Powrót </p>
+	</div>
 	</body>
 </html>

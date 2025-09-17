@@ -1,0 +1,300 @@
+<html>
+	<head>
+	<title> Quiz </title>
+	<style>
+	.textflex { display : flex; }
+	.big { font-size: 50px; }
+	.medium { font-size: 35px; }
+	.zdjcinside { margin-left: 5px; margin-top: 0; }
+	.nazwa { font-size: 30px; }
+	.graybg { background-color: 9c9c9c; }	
+	body {
+		background-color: bebebe;
+	}
+	</style>
+	<script>
+	var punkty = 0;
+	var pytanie1 = 0
+	var pytanie2 = 0
+	var pytanie3 = 0
+	var pytanie4 = 0
+	var pytanie5 = 0
+	var pytanie6 = 0
+	var pytanie7 = 0
+	function pytanie1odp1 () {
+		if (pytanie1 == 0) {
+			pytanie1 = pytanie1 + 1;
+			alert('Zła odpowiedź!')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie1odp2 () {
+		if (pytanie1 == 0) {
+			pytanie1 = pytanie1 + 1;
+			punkty = punkty + 2;
+			alert('Dobra odpowiedź!')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie1odp3 () {
+		if (pytanie1 == 0) {
+			pytanie1 = pytanie1 + 1;
+			alert('Zła odpowiedź!')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie2odp1 () {
+		if (pytanie2 == 0) {
+			pytanie2 = pytanie2 + 1;
+			punkty = punkty + 1;
+			alert('Dobra odpowiedź!')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie2odp2 () {
+		if (pytanie2 == 0) {
+			pytanie2 = pytanie2 + 1;
+			alert('Zła odpowiedź!')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie2odp3 () {
+		if (pytanie2 == 0) {
+			pytanie2 = pytanie2 + 1;
+			alert('Zła odpowiedź!')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie3odp1 () {
+		if (pytanie3 == 0) {
+			pytanie3 = pytanie3 + 1;
+			alert('Zła odpowiedź!')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie3odp2 () {
+		if (pytanie3 == 0) {
+			pytanie3 = pytanie3 + 1;
+			punkty = punkty + 1;
+			alert('Zła odpowiedź! Chociaż zasługujesz na 1 punkt bo byłeś blisko.')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie3odp3 () {
+		if (pytanie3 == 0) {
+			pytanie3 = pytanie3 + 1;
+			punkty = punkty + 3;
+			alert('Dobra odpowiedź!')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie4odp1 () {
+		if (pytanie4 == 0) {
+			pytanie4 = pytanie4 + 1;
+			alert('Zła odpowiedź!')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie4odp2 () {
+		if (pytanie4 == 0) {
+			pytanie4 = pytanie4 + 1;
+			alert('Zła odpowiedź!')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie4odp3 () {
+		if (pytanie4 == 0) {
+			pytanie4 = pytanie4 + 1;
+			punkty = punkty + 4;
+			alert('Dobra odpowiedź!')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie5odp1 () {
+		if (pytanie5 == 0) {
+			pytanie5 = pytanie5 + 1;
+			punkty = punkty + 6;
+			alert('Dobra odpowiedź!')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie5odp2 () {
+		if (pytanie5 == 0) {
+			pytanie5 = pytanie5 + 1;
+			punkty = punkty + 2;
+			alert('cheese (+2 punkty)')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie5odp3 () {
+		if (pytanie5 == 0) {
+			pytanie5 = pytanie5 + 1;
+			alert('Zła odpowiedź!')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie6odp1 () {
+		if (pytanie6 == 0) {
+			pytanie6 = pytanie6 + 1;
+			alert('Zła odpowiedź!')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie6odp2 () {
+		if (pytanie6 == 0) {
+			pytanie6 = pytanie6 + 1;
+			punkty = punkty + 3;
+			alert('Dobra odpowiedź!')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie6odp3 () {
+		if (pytanie6 == 0) {
+			pytanie6 = pytanie6 + 1;
+			punkty = punkty - 2;
+			alert('Ekstra zła odpowiedź! -2 punkty!')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie7odp1 () {
+		if (pytanie7 == 0) {
+			pytanie7 = pytanie7 + 1;
+			punkty = punkty + 4;
+			alert('Dobra odpowiedź!')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie7odp2 () {
+		if (pytanie7 == 0) {
+			pytanie7 = pytanie7 + 1;
+			alert('Zła odpowiedź!')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function pytanie7odp3 () {
+		if (pytanie7 == 0) {
+			pytanie7 = pytanie7 + 1;
+			alert('Zła odpowiedź!')
+		}
+		else {
+			alert('Już na to odpowiedziałeś.')
+		}
+	}
+	function checkall() {
+		if (pytanie1 == 1 && pytanie2 == 1 && pytanie3 == 1 && pytanie4 == 1 && pytanie5 == 1 && pytanie6 == 1 && pytanie7 == 1) {
+			if (punkty < 23) {
+				if (punkty < 0) {
+					document.getElementById("wynik").innerHTML = punkty + " punktów. Ja wszystko rozumiem. Ale jakim cudem na minusie????"
+				}
+				else {
+					document.getElementById("wynik").innerHTML = punkty + " punktów. Maksymalna ilość to 23."
+				}
+			}
+			else {
+				document.getElementById("wynik").innerHTML = punkty + " punktów. Masz maksymalną ilość punktów."
+			}
+			alert('Przewiń w dół')
+		}
+		else {
+			alert('Najpierw odpowiedz na pytania.')
+		}
+	}
+	</script>
+	</head>
+	<body>
+	<h1 class="big"> Quiz </h1>
+	<p class="graybg"> W tym quizie będą liczone punkty. Na samym końcu jest napisany wynik. </p>
+	<div class="textflex">
+	<p class="medium"> Pytanie 1: Jak nazywał się pierwszy komputer? </p>
+	<p> Punkty: 2 </p>
+	</div>
+	<button onclick="pytanie1odp1()"> SuperPC </button>
+	<button onclick="pytanie1odp2()"> ENIAC </button>
+	<button onclick="pytanie1odp3()"> HyperBot </button>
+	<div class="textflex">
+	<p class="medium"> Pytanie 2: Jak nazywa się popularna platforma z grami, która ma okrągłe niebieskie logo? </p>
+	<p> Punkty: 1 </p>
+	</div>
+	<button onclick="pytanie2odp1()"> Steam </button>
+	<button onclick="pytanie2odp2()"> Roblox </button>
+	<button onclick="pytanie2odp3()"> Minecraft </button>
+	<div class="textflex">
+	<p class="medium"> Pytanie 3: Jak nazywa się program którego użyłem do zrobienia strony? </p>
+	<p> Punkty: 3 </p>
+	</div>
+	<button onclick="pytanie3odp1()"> Gamemaker </button>
+	<button onclick="pytanie3odp2()"> Notatnik </button>
+	<button onclick="pytanie3odp3()"> Notepad++ </button>
+	<div class="textflex">
+	<p class="medium"> Pytanie 4: Jak się robi przycisk który robi <button onclick="alert('siema')"> to? </button> </p>
+	<p> Punkty: 4 </p>
+	</div>
+	<button onclick="pytanie4odp1()"> &ltbutton alert = siema&gt </button>
+	<button onclick="pytanie4odp2()"> &ltbutton click alert = "siema"&gt </button>
+	<button onclick="pytanie4odp3()"> &ltbutton onclick = "alert('siema')"&gt </button>
+	</body>
+	<div class="textflex">
+	<p class="medium"> Pytanie 5: Czym jest RAT? </button> </p>
+	<p> Punkty: 6 </p>
+	</div>
+	<button onclick="pytanie5odp1()"> Remote Access Trojan </button>
+	<button onclick="pytanie5odp2()"> Szczur </button>
+	<button onclick="pytanie5odp3()"> Random Access Table </button>
+	<div class="textflex">
+	<p class="medium"> Pytanie 6: Co robi GPU? </button> </p>
+	<p> Punkty: 3 </p>
+	</div>
+	<button onclick="pytanie6odp1()"> Oblicza </button>
+	<button onclick="pytanie6odp2()"> Rysuje </button>
+	<button onclick="pytanie6odp3()"> Nie wiem. </button>
+	<div class="textflex">
+	<p class="medium"> Ostatnie pytanie: Co <a href="../data/nXW7mvy692w8k35F.jpg"> to</a> jest? </button> </p>
+	<p> Punkty: 4 </p>
+	</div>
+	<button onclick="pytanie7odp1()"> Bonzi buddy </button>
+	<button onclick="pytanie7odp2()"> Turbo monkey </button>
+	<button onclick="pytanie7odp3()"> Notepad++ </button>
+	<br>
+	<button onclick="checkall()"> Sprawdź </button>
+	<p id="wynik"> </p>
+</html>
