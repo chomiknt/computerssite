@@ -1,0 +1,212 @@
+<html>
+	<head>
+	<title> - Clicker - </title>
+	<style> 
+	.plusdisplay { font-size: 15px; color: cyan; }
+	.rebirthpdisplayer { color: yellow; font-size: 30px; }
+	body {
+		background-color: bebebe;
+	}
+	</style>
+	<script>
+	var clicks = 0
+	var power = 1
+	var price = 50
+	var betterpower = 1
+	var betterprice = 500
+	var superpower = 1
+	var superprice = 7500
+	var rebirthprompt = 0
+	var rebirths = 0
+	var rebirthpower = 1
+	var rebirthpoints = 0
+	var rebirthprice1 = 5
+	var rebirthupg1bought = 0
+	var rebirthprice2 = 1
+	var rebirthprice3 = 1000000
+	var rebirthupg3bought = 0
+	var hyperprice = 1000000000000000000000000
+	var hyperpower = 1
+	var rebirthprice4 = 100000000
+	var rebirthupg4bought = 0
+	var rebirthbonus = 1
+	function click1 () {
+		rebirthprompt = 0
+		clicks = clicks + (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus);
+		document.getElementById("clickerdisplay").innerHTML = clicks + " punktów";
+		if (clicks >= 100000) {
+			document.getElementById("rebirthp").innerHTML = "<button onclick='rebirth()'> Rebirth </button>"
+		}
+	}
+	function upgrade () {
+		if (clicks >= price) {
+		clicks = clicks - price;
+		price = Math.round(price * 1.2);
+		power = power + 1;
+		document.getElementById("upgrader").innerHTML = "Ulepsz (cena: " + price + ")";
+		document.getElementById("clickerdisplay").innerHTML = clicks + " punktów";
+		var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus);
+		document.getElementById("pdisplay").innerHTML = "+ " + clickformula + " na klik";
+		}
+		else {
+			alert('Potrzeba ci więcej punktów.');
+		}
+		
+	}
+	function betterupgrade () {
+		if (clicks >= betterprice) {
+		clicks = clicks - betterprice;
+		betterprice = Math.round(betterprice * 1.5);
+		betterpower = betterpower + 1;
+		document.getElementById("betterupgrader").innerHTML = "Ulepsz lepiej (cena: " + betterprice + ")";
+		document.getElementById("clickerdisplay").innerHTML = clicks + " punktów";
+		var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus);
+		document.getElementById("pdisplay").innerHTML = "+ " + clickformula + " na klik";
+		}
+		else {
+			alert('Potrzeba ci więcej punktów.');
+		}
+		
+	}
+	function superupgrade () {
+		if (clicks >= superprice) {
+		clicks = clicks - superprice;
+		superprice = Math.round(superprice ** 1.5);
+		superpower = superpower + 1;
+		document.getElementById("superupgbutton").innerHTML = "<button onclick=superupgrade()>Super ulepsz (cena: " + superprice + ")</button>";
+		document.getElementById("clickerdisplay").innerHTML = clicks + " punktów";
+		var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus);
+		document.getElementById("pdisplay").innerHTML = "+ " + clickformula + " na klik";
+		}
+		else {
+			alert('Potrzeba ci więcej punktów.');
+		}
+	}
+	function hyperupgrade () {
+		if (clicks >= hyperprice) {
+		clicks = clicks - hyperprice;
+		hyperprice = Math.round(hyperprice ** 2);
+		hyperpower = hyperpower + 1;
+		document.getElementById("hyperupgbutton").innerHTML = "<button onclick=hyperupgrade()>Hiper ulepsz (cena: " + hyperprice + ")</button>";
+		document.getElementById("clickerdisplay").innerHTML = clicks + " punktów";
+		var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus);
+		document.getElementById("pdisplay").innerHTML = "+ " + clickformula + " na klik";
+		}
+		else {
+			alert('Potrzeba ci więcej punktów.');
+		}
+	}
+	function rebirth() {
+		if (rebirthprompt == 3) {
+			rebirthprompt = 0
+			rebirthpoints = rebirthpoints + clicks * 0.00001
+			clicks = 0
+			price = 50
+			betterprice = 500
+			power = 1
+			betterpower = 1
+			superprice = 7500
+			superpower = 1
+			rebirths = rebirths + 1
+			if (rebirthupg1bought == 1) {
+				document.getElementById("superupgbutton").innerHTML = "<button onclick=superupgrade()> Super ulepsz (cena: 7500)";
+			}
+			document.getElementById("clickerdisplay").innerHTML = clicks + " punktów";
+			var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus);
+			document.getElementById("pdisplay").innerHTML = "+ " + clickformula + " na klik";
+			document.getElementById("rebirthp").innerHTML = "";
+			document.getElementById("upgrader").innerHTML = "Ulepsz (cena: 50)";
+			document.getElementById("betterupgrader").innerHTML = "Ulepsz lepiej (cena: 500)";
+			document.getElementById("rebirthpdisplay").innerHTML = rebirthpoints + " rebirthowych punktów";
+			document.getElementById("rebirthupg1").innerHTML = "<button onclick=rebirthupgrade()> Odblokuj super ulepszenie (cena: 5) </button>";
+			document.getElementById("rebirthupg2").innerHTML = "<button onclick=rebirthupgrade2()> Rebirthowo ulepsz (cena: " + rebirthprice2 + ") </button>";
+			document.getElementById("rebirthupg3").innerHTML = "<button onclick=rebirthupgrade3()> Odblokuj hiper ulepszenie (cena: 1000000) </button>";
+			document.getElementById("rebirthupg4").innerHTML = "<button onclick=rebirthupgrade4()> 100x punkty (cena: 100000000) </button>";
+			
+		}
+		else {
+			if (rebirthprompt == 2) {
+				alert("Następny klik zresetuje WSZYSTKO. Czy jesteś pewien?")
+				rebirthprompt = rebirthprompt + 1;
+			}
+			else {
+				if (rebirthprompt == 1) {
+					alert("Kliknij jeszcze 2 razy aby zrebirthować.")
+					rebirthprompt = rebirthprompt + 1;
+				}
+				else {
+					alert("Rebirth zresetuje wszystkie ulepszenia i punkty. Czy chcesz kontynuować? W nagrodę otrzymasz " + clicks * 0.00001 + " rebirthowych punktów.")
+					rebirthprompt = rebirthprompt + 1;
+				}
+			}
+		}
+	}
+	function rebirthupgrade() {
+		if (rebirthpoints >= rebirthprice1 && rebirthupg1bought == 0) {
+		rebirthpoints = rebirthpoints - rebirthprice1;
+		rebirthupg1bought = 1;
+		document.getElementById("superupgbutton").innerHTML = "<button onclick=superupgrade()> Super ulepsz (cena: 7500)";
+		document.getElementById("rebirthpdisplay").innerHTML = rebirthpoints + " rebirthowych punktów";
+		}
+		else {
+			alert('Potrzeba ci więcej rebirthowych punktów (lub już to kupiłeś).');
+		}
+	}
+	function rebirthupgrade2() {
+		if (rebirthpoints >= rebirthprice2) {
+		rebirthpoints = rebirthpoints - rebirthprice2;
+		rebirthprice2 = rebirthprice2 * 1.75;
+		rebirthpower = rebirthpower + 1;
+		document.getElementById("rebirthupg2").innerHTML = "<button onclick=rebirthupgrade2()>Rebirthowo ulepsz (cena: " + rebirthprice2 + ")</button>";
+		document.getElementById("rebirthpdisplay").innerHTML = rebirthpoints + " rebirthowych punktów";
+		var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus);
+		document.getElementById("pdisplay").innerHTML = "+ " + clickformula + " na klik";
+		}
+		else {
+			alert('Potrzeba ci więcej rebirthowych punktów.');
+		}
+	}
+	function rebirthupgrade3() {
+		if (rebirthpoints >= rebirthprice3 && rebirthupg3bought == 0) {
+		rebirthpoints = rebirthpoints - rebirthprice3;
+		rebirthupg3bought = 1;
+		document.getElementById("hyperupgbutton").innerHTML = "<button onclick=hyperupgrade()> Hiper ulepsz (cena: 1000000000000000000000000)";
+		document.getElementById("rebirthpdisplay").innerHTML = rebirthpoints + " rebirthowych punktów";
+		}
+		else {
+			alert('Potrzeba ci więcej rebirthowych punktów (lub już to kupiłeś).');
+		}
+	}
+	function rebirthupgrade4() {
+		if (rebirthpoints >= rebirthprice4 && rebirthupg4bought == 0) {
+		rebirthpoints = rebirthpoints - rebirthprice4;
+		rebirthupg4bought = 1;
+		rebirthbonus = 100
+		document.getElementById("rebirthpdisplay").innerHTML = rebirthpoints + " rebirthowych punktów";
+		}
+		else {
+			alert('Potrzeba ci więcej rebirthowych punktów (lub już to kupiłeś).');
+		}
+	}
+	</script>
+	</head>
+	<body>
+	<h1 id="clickerdisplay"> 0 punktów </h1>
+	<p class="plusdisplay" id="pdisplay"> + 1 na klik </p>
+	<button onclick="click1()"> Kliknij </button>
+	<br> <br>
+	<button onclick="upgrade()" id="upgrader"> Ulepsz (cena: 50) </button>
+	<br>
+	<button onclick="betterupgrade()" id="betterupgrader"> Ulepsz lepiej (cena: 500) </button>
+	<p id="superupgbutton"> </p>
+	<p id="hyperupgbutton"> </p>
+	<br>
+	<p id="rebirthp"> </p>
+	<br>
+	<p id="rebirthpdisplay" class="rebirthpdisplayer"> </p>
+	<p id="rebirthupg1"> </p>
+	<p id="rebirthupg2"> </p>
+	<p id="rebirthupg3"> </p>
+	<p id="rebirthupg4"> </p>
+	</body>
+</html>
