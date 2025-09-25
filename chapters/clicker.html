@@ -3,7 +3,6 @@
 	<title> - Clicker - </title>
 	<style> 
 	.plusdisplay { font-size: 15px; color: cyan; }
-	.pointsxdisp { font-size: 30px; color: purple; }
 	.rebirthpdisplayer { color: yellow; font-size: 30px; }
 	body {
 		background-color: bebebe;
@@ -31,16 +30,9 @@
 	var rebirthprice4 = 100000000
 	var rebirthupg4bought = 0
 	var rebirthbonus = 1
-	var rebirthprice5 = 7847652
-	var rebirthupg5bought = 0
-	var pointsx = 0
-	var pointsxprice1 = 50
-	var xpower = 1
-	var xsuperpower = 1
-	var pointsxprice2 = 2500
 	function click1 () {
 		rebirthprompt = 0
-		clicks = clicks + (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus * (xpower ** xsuperpower));
+		clicks = clicks + (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus);
 		document.getElementById("clickerdisplay").innerHTML = clicks + " punktów";
 		if (clicks >= 100000) {
 			document.getElementById("rebirthp").innerHTML = "<button onclick='rebirth()'> Rebirth </button>"
@@ -53,7 +45,7 @@
 		power = power + 1;
 		document.getElementById("upgrader").innerHTML = "Ulepsz (cena: " + price + ")";
 		document.getElementById("clickerdisplay").innerHTML = clicks + " punktów";
-		var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus * (xpower ** xsuperpower));
+		var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus);
 		document.getElementById("pdisplay").innerHTML = "+ " + clickformula + " na klik";
 		}
 		else {
@@ -68,7 +60,7 @@
 		betterpower = betterpower + 1;
 		document.getElementById("betterupgrader").innerHTML = "Ulepsz lepiej (cena: " + betterprice + ")";
 		document.getElementById("clickerdisplay").innerHTML = clicks + " punktów";
-		var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus * (xpower ** xsuperpower));
+		var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus);
 		document.getElementById("pdisplay").innerHTML = "+ " + clickformula + " na klik";
 		}
 		else {
@@ -83,7 +75,7 @@
 		superpower = superpower + 1;
 		document.getElementById("superupgbutton").innerHTML = "<button onclick=superupgrade()>Super ulepsz (cena: " + superprice + ")</button>";
 		document.getElementById("clickerdisplay").innerHTML = clicks + " punktów";
-		var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus * (xpower ** xsuperpower));
+		var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus);
 		document.getElementById("pdisplay").innerHTML = "+ " + clickformula + " na klik";
 		}
 		else {
@@ -97,7 +89,7 @@
 		hyperpower = hyperpower + 1;
 		document.getElementById("hyperupgbutton").innerHTML = "<button onclick=hyperupgrade()>Hiper ulepsz (cena: " + hyperprice + ")</button>";
 		document.getElementById("clickerdisplay").innerHTML = clicks + " punktów";
-		var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus * (xpower ** xsuperpower));
+		var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus);
 		document.getElementById("pdisplay").innerHTML = "+ " + clickformula + " na klik";
 		}
 		else {
@@ -120,7 +112,7 @@
 				document.getElementById("superupgbutton").innerHTML = "<button onclick=superupgrade()> Super ulepsz (cena: 7500)";
 			}
 			document.getElementById("clickerdisplay").innerHTML = clicks + " punktów";
-			var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus * (xpower ** xsuperpower));
+			var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus);
 			document.getElementById("pdisplay").innerHTML = "+ " + clickformula + " na klik";
 			document.getElementById("rebirthp").innerHTML = "";
 			document.getElementById("upgrader").innerHTML = "Ulepsz (cena: 50)";
@@ -130,7 +122,7 @@
 			document.getElementById("rebirthupg2").innerHTML = "<button onclick=rebirthupgrade2()> Rebirthowo ulepsz (cena: " + rebirthprice2 + ") </button>";
 			document.getElementById("rebirthupg3").innerHTML = "<button onclick=rebirthupgrade3()> Odblokuj hiper ulepszenie (cena: 1000000) </button>";
 			document.getElementById("rebirthupg4").innerHTML = "<button onclick=rebirthupgrade4()> 100x punkty (cena: 100000000) </button>";
-			document.getElementById("rebirthupg5").innerHTML = "<button onclick=rebirthupgrade5()> ??? (cena: &amp^%$#@!*) </button>";
+			
 		}
 		else {
 			if (rebirthprompt == 2) {
@@ -167,7 +159,7 @@
 		rebirthpower = rebirthpower + 1;
 		document.getElementById("rebirthupg2").innerHTML = "<button onclick=rebirthupgrade2()>Rebirthowo ulepsz (cena: " + rebirthprice2 + ")</button>";
 		document.getElementById("rebirthpdisplay").innerHTML = rebirthpoints + " rebirthowych punktów";
-		var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus * (xpower ** xsuperpower));
+		var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus);
 		document.getElementById("pdisplay").innerHTML = "+ " + clickformula + " na klik";
 		}
 		else {
@@ -191,53 +183,9 @@
 		rebirthupg4bought = 1;
 		rebirthbonus = 100
 		document.getElementById("rebirthpdisplay").innerHTML = rebirthpoints + " rebirthowych punktów";
-		var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus * (xpower ** xsuperpower));
-		document.getElementById("pdisplay").innerHTML = "+ " + clickformula + " na klik";
 		}
 		else {
 			alert('Potrzeba ci więcej rebirthowych punktów (lub już to kupiłeś).');
-		}
-	}
-	function rebirthupgrade5() {
-		if (rebirthpoints >= rebirthprice5 && rebirthupg5bought == 0) {
-		rebirthpoints = rebirthpoints - rebirthprice5;
-		rebirthupg5bought = 1;
-		document.getElementById("rebirthpdisplay").innerHTML = rebirthpoints + " rebirthowych punktów";
-		document.getElementById("pointsxdisplay").innerHTML = pointsx + " punktów X";
-		document.getElementById("pointsxclick").innerHTML = "<button onclick=xclick()> Kliknij </button>";
-		document.getElementById("pointsxupg1").innerHTML = "<button onclick=xupgrade1()> Ulepsz (cena: 50) </button>";
-		document.getElementById("pointsxupg2").innerHTML = "<button onclick=xupgrade2()> Super ulepsz (cena: 2500) </button>";
-		}
-		else {
-			alert('Potrzeba ci więcej rebirthowych punktów (lub już to kupiłeś).');
-		}
-	}
-	function xclick() {
-		pointsx = pointsx + 1
-		document.getElementById("pointsxdisplay").innerHTML = pointsx + " punktów X";
-	}
-	function xupgrade1() {
-		if (pointsx >= pointsxprice1) {
-			pointsx = pointsx - pointsxprice1;
-			xpower = xpower + 1
-			var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus * (xpower ** xsuperpower));
-			document.getElementById("pdisplay").innerHTML = "+ " + clickformula + " na klik";
-			document.getElementById("pointsxdisplay").innerHTML = pointsx + " punktów X";
-		}
-		else {
-			alert('Potrzeba ci więcej punktów X.');
-		}
-	}
-	function xupgrade2() {
-		if (pointsx >= pointsxprice2) {
-			pointsx = pointsx - pointsxprice2;
-			xsuperpower = xsuperpower + 1
-			var clickformula = (power * (betterpower ** superpower ** (hyperpower * hyperpower)) * rebirthpower * rebirthbonus * (xpower ** xsuperpower));
-			document.getElementById("pdisplay").innerHTML = "+ " + clickformula + " na klik";
-			document.getElementById("pointsxdisplay").innerHTML = pointsx + " punktów X";
-		}
-		else {
-			alert('Potrzeba ci więcej punktów X.');
 		}
 	}
 	</script>
@@ -260,11 +208,5 @@
 	<p id="rebirthupg2"> </p>
 	<p id="rebirthupg3"> </p>
 	<p id="rebirthupg4"> </p>
-	<p id="rebirthupg5"> </p>
-	<br>
-	<p id="pointsxdisplay" class="pointsxdisp"> </p>
-	<p id="pointsxclick"> </p>
-	<p id="pointsxupg1"> </p>
-	<p id="pointsxupg2"> </p>
 	</body>
 </html>

@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title> Puzzle game </title>
+		<style>
+		</style>
+		<script>
+			function lista() {
+				alert("1. Wygrałeś \n2. Google chrome \n3. RNG.start")
+			}
+			function start() {
+				var startrng = Math.floor(Math.random() * 25)
+				if(startrng == 7) {
+					document.getElementById("text1").innerHTML = "Ending: RNG.start"
+					document.getElementById("text2").innerHTML = "<a href=puzzle.html> Restart </a>"
+					document.getElementById("startbtn").innerHTML = ""
+					document.getElementById("gogle").innerHTML = ""
+				}
+				else {
+					document.getElementById("text1").innerHTML = "KLIKNIJ TO ABY WYGRAĆ !!!"
+					document.getElementById("text2").innerHTML = "<button onclick=win()> WYGRAJ </button>"
+					document.getElementById("startbtn").innerHTML = ""
+					document.getElementById("gogle").innerHTML = "<button onclick=gogle()> gogle hrom e </button>"
+				}
+			}
+			function win() {
+				document.getElementById("text1").innerHTML = "Ending: Wygrałeś!"
+				document.getElementById("text2").innerHTML = "Może spróbuj czegoś innego następnym razem?"
+				document.getElementById("startbtn").innerHTML = "<a href=puzzle.html> Restart </a>"
+				document.getElementById("gogle").innerHTML = ""
+			}
+			function gogle() {
+				document.getElementById("text1").innerHTML = "Ending: Google chrome"
+				document.getElementById("text2").innerHTML = "<a href=puzzle.html> Restart </a>"
+				document.getElementById("startbtn").innerHTML = ""
+				document.getElementById("gogle").innerHTML = ""
+			}
+		</script>
+	</head>
+	<body>
+		<h1 id="text1"> Gra o endingach </h1>
+		<p id="text2"> Czy uda ci się zdobyć wszystkie <button onclick="lista()"> ending</button>i?</p>
+		<br>
+		<p id="startbtn"><button onclick="start()"> Start </button></p>
+		<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+		<p id="gogle"></p>
+	</body>
+</html>
